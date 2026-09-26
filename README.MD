@@ -1,1 +1,0 @@
-https://github.com/liiteea/slozhno-sosredotochitsya-fd
