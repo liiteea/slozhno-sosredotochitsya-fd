@@ -296,7 +296,6 @@
     row-gap: 20px;
   }
 
-  .section__type-concentrate .section__title,
   .section__type-concentrate .section__card {
     grid-column: 1 / -1;
   }
