@@ -28,8 +28,8 @@
   inset-inline-end: 10px;
   block-size: 25px;
   inline-size: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
   position: absolute;
 }
 
@@ -40,8 +40,8 @@
   inline-size: 25px;
   inset-block-end: 10px;
   inset-inline-start: 10px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
 }
 
 .header__rec {
@@ -83,16 +83,16 @@
   block-size: 26px;
   padding-inline: 13px;
   align-self: center;
-  color: var(--accent-color);
+  color: var(--decor-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--decor-color);
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--transparent-decor-color);
 }
 
 .header__theme-menu-button:focus {
@@ -100,7 +100,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decor-color);
 }
 
 .header__title {
@@ -123,7 +123,7 @@
 
 .title-decor {
   font-weight: bold;
-  color: var(--background-color);
+  color: var(--font-color);
   background-color: var(--accent-color);
   text-align: left;
 }
@@ -144,7 +144,7 @@
 }
 
 .section__title {
-  color: var(--accent-color);
+  color: var(--font-color);
   font-weight: 700;
   font-size: var(--font-size);
 }
@@ -173,7 +173,7 @@
 }
 
 .section__link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--color);
 }
 
 .section__link:focus {
@@ -194,6 +194,7 @@
   inline-size: 100%;
   block-size: auto;
   object-fit: cover;
+  object-position: center;
 }
 
 .gallery__title {
@@ -277,27 +278,52 @@
 
   .section__title {
     grid-column: 1;
-    grid-row: 1/5;
   }
 
-  .section__title-text,
-  .section__text,
-  .section__text-decor {
+  .section__type-focus {
+    row-gap: 20px;
+  }
+
+  .section__type-focus .section__title {
+    grid-row: 1 / span 2;
+  }
+
+  .section__type-focus .section__card {
     grid-column: 2;
   }
 
-  .section__title-text:first-of-type {
+  .section__type-focus .section__title-text {
     margin-block-start: 0;
   }
 
-  .section__type-concentrate .section__title-text,
-  .section__type-concentrate .section__text,
-  .section__type-concentrate .section__text-decor {
-    grid-column: 1/-1;
+  .section__type-concentrate {
+    row-gap: 20px;
   }
 
-  .section__type-concentrate .section__title {
-    padding-block-end: 20px;
+  .section__type-concentrate .section__title,
+  .section__type-concentrate .section__card {
+    grid-column: 1 / -1;
+  }
+
+  .section__type-concentrate .section__title-text {
+    margin-block-start: 0;
+  }
+
+  .section__type-tips {
+    row-gap: 20px;
+  }
+
+.section__type-tips .section__title {
+  grid-row: 1 / span 6;
+  }
+
+  .section__type-tips > .section__title-text,
+  .section__type-tips .section__card {
+    grid-column: 2;
+  }
+
+  .section__type-tips .section__title-text {
+    margin-block-start: 0;
   }
 
   .gallery {
@@ -365,36 +391,14 @@
   }
 
   .section__type-concentrate {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .section__type-concentrate .section__title {
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: 1 / -1;
   }
 
-  .section__type-concentrate .section__title-text {
-    grid-row: 2;
-  }
-
-  .section__type-concentrate .section__text {
-    grid-row: 3;
-  }
-
-  .section__type-concentrate .section__title-text:nth-of-type(1),
-  .section__type-concentrate .section__text:nth-of-type(1) {
-    grid-column: 1;
-  }
-
-  .section__type-concentrate .section__title-text:nth-of-type(2),
-  .section__type-concentrate .section__text:nth-of-type(2) {
-    grid-column: 2;
-    margin-block-start: 0px;
-  }
-
-  .section__type-concentrate .section__title-text:nth-of-type(3),
-  .section__type-concentrate .section__text:nth-of-type(3) {
-    grid-column: 3;
-    margin-block-start: 0px;
+  .section__type-concentrate .section__card {
+    grid-column: auto;
   }
 }

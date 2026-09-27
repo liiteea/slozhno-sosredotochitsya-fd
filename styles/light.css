@@ -14,6 +14,9 @@
   --accent-color: #FF8DCB;
   --header-color: #FFC2E6;
   --color: #353430;
+  --decor-color: var(--color);
+  --transparent-decor-color: rgba(50, 49, 45, 0.4);
+  --font-color: var(--color);
 }
 
 @media (prefers-color-scheme: light) {
@@ -23,6 +26,9 @@
     --accent-color: #FF8DCB;
     --header-color: #FFC2E6;
     --color: #353430;
+    --decor-color: var(--color);
+    --transparent-decor-color: rgba(50, 49, 45, 0.4);
+    --font-color: var(--color);
   }
 }
 

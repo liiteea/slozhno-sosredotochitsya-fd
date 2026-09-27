@@ -5,4 +5,7 @@
   --header-color: #DB00FF;
   --color: #F1B2CE;
   --font-size: 18px;
+  --decor-color: var(--accent-color);
+  --transparent-decor-color: rgba(255, 0, 112, 0.4);
+  --font-color: var(--background-color);
 }
