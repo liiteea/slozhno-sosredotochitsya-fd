@@ -284,10 +284,6 @@
     row-gap: 20px;
   }
 
-  .section__type-focus .section__title {
-    grid-row: 1 / span 2;
-  }
-
   .section__type-focus .section__card {
     grid-column: 2;
   }
@@ -313,8 +309,8 @@
     row-gap: 20px;
   }
 
-.section__type-tips .section__title {
-  grid-row: 1 / span 6;
+  .section__type-tips .section__title {
+    grid-row: 1 / span 6;
   }
 
   .section__type-tips > .section__title-text,
@@ -396,6 +392,8 @@
 
   .section__type-concentrate .section__title {
     grid-column: 1 / -1;
+    inline-size: calc((100% - 40px) / 3);
+    justify-self: start;
   }
 
   .section__type-concentrate .section__card {
