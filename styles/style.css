@@ -144,7 +144,7 @@
 }
 
 .section__title {
-  color: var(--font-color);
+  color: var(--decor-color);
   font-weight: 700;
   font-size: var(--font-size);
 }
@@ -162,9 +162,7 @@
 }
 
 .section__text-decor {
-  margin-block-start: 20px;
   font-weight: normal;
-  font-size: var(--font-size);
 }
 
 .section__link {
@@ -386,7 +384,7 @@
   }
 
   .section__type-concentrate {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .section__type-concentrate .section__title {
